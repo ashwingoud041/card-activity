@@ -3,14 +3,24 @@ import styled from 'styled-components';
 import { colors } from '../../../constants/colors';
 
 interface Props {
+    isSmall: boolean;
     disabled: boolean;
     children: ReactNode;
     onClick?: () => void;
 }
 
-export const GradientButtonBase = ({ disabled, children, onClick }: Props) => (
+export const GradientButtonBase = ({
+    isSmall,
+    disabled,
+    children,
+    onClick,
+}: Props) => (
     <button disabled={disabled} onClick={onClick} className="cursor-pointer">
-        <GradientBackground className="w-[17rem] h-[4rem] px-6 flex justify-center items-center rounded-[32px]">
+        <GradientBackground
+            className={`${
+                isSmall ? 'w-[14rem] h-[3rem] px-4' : 'w-[17rem] h-[4rem] px-6'
+            } flex justify-center items-center rounded-[32px]`}
+        >
             {children}
         </GradientBackground>
     </button>

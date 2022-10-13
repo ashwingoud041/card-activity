@@ -27,7 +27,23 @@ export const GlobalStyle = createGlobalStyle`
       font-family: 'Kanit-Medium';
       src: local('Kanit-Medium'),
           url(${KanitMedium}) format('truetype');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+  }
+  @font-face {
+      font-family: 'Kanit-Medium';
+      src: local('Kanit-Medium'),
+          url(${KanitMedium}) format('truetype');
       font-weight: 500;
+      font-style: normal;
+      font-display: swap;
+  }
+  @font-face {
+      font-family: 'Kanit-Medium';
+      src: local('Kanit-Medium'),
+          url(${KanitMedium}) format('truetype');
+      font-weight: 700;
       font-style: normal;
       font-display: swap;
   }
@@ -37,12 +53,9 @@ export const GlobalStyle = createGlobalStyle`
   body, html {
     margin: 0;
     width: 100%;
-    height: 100%;
     background: linear-gradient(180deg, ${colors.black['900']} 1.77%, ${colors.black['600']} 100%);
     font-family: "Kanit-Light";
-    font-size: 14px;
+    font-size: 16px;
     color: ${colors.gray['500']};
-    overscroll-behavior-y: none;
-    overflow: hidden;
   }
 `;

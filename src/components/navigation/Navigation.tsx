@@ -63,11 +63,12 @@ export const Navigation = () => {
                         </>
                     ) : (
                         <GradientButtonWithIcon
+                            isSmall={false}
                             disabled={false}
                             text="CONNECT WALLET"
                             onClick={activate}
                         >
-                            <img src={keyIcon} alt="copy"></img>
+                            <img src={keyIcon} alt="key"></img>
                         </GradientButtonWithIcon>
                     )}
                 </div>

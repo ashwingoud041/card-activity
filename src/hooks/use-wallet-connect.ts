@@ -120,7 +120,7 @@ export const useWalletConnect = () => {
             ? parseBigNumber(ethBalanceAsBigNumber)
             : 0,
         tokenBalance: tokenBalanceAsBigNumber
-            ? parseBigNumber(tokenBalanceAsBigNumber)
+            ? parseBigNumber(tokenBalanceAsBigNumber, ASSET_LAKE.decimals)
             : 0,
         library,
         error: internalState.error || error?.toString() || null,

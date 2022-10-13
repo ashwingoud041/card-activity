@@ -8,6 +8,8 @@ interface Props {
 
 export const Button = ({ disabled, text, onClick }: Props) => (
     <ButtonBase disabled={disabled} onClick={onClick}>
-        <span className="color-gradient tracking-wider text-xl">{text}</span>
+        <span className="color-gradient-light tracking-wider text-xl">
+            {text}
+        </span>
     </ButtonBase>
 );

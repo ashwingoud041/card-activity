@@ -2,8 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
-.color-gradient {
+.color-gradient-light {
     background: linear-gradient(90.21deg, #f9d0e3, #d2c7ff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.color-gradient {
+    background: linear-gradient(90.21deg, #ec6ca9 11.91%, #7b61ff 91.55%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.color-gray-gradient {
+    background: linear-gradient(180deg, #d1d1d1 25%, #ffffff 60%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.text-shadow {
+    text-shadow: -6px -6px 24px rgba(136, 136, 136, 0.04),
+        8px 8px 10px rgba(87, 87, 87, 0.24);
+}
+
+.inset-shadow {
+    box-shadow: inset 0px 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+.font-kanit-regular {
+    font-family: 'Kanit-Regular';
+}
+
+.font-kanit-medium {
+    font-family: 'Kanit-Medium';
 }

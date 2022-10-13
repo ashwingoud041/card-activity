@@ -5,7 +5,11 @@ module.exports = {
         colors: {
             black: {
                 500: '#2B2B2B',
+				800: '#191919'
             },
+			gray: {
+				700: '#666666'
+			}
         },
     },
     plugins: [],

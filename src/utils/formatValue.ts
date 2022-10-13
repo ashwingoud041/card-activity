@@ -14,8 +14,5 @@ export const formatValue = (
             : ''
     }${formatNumber(value, symbol, precision)
         .toFixed(outputPrecision)
-        .replace(
-            /\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g,
-            symbol?.length === 1 ? ',' : '',
-        )} ${symbol}`;
+        .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ',')} ${symbol}`;
 };

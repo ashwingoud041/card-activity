@@ -17,7 +17,7 @@ export const ButtonWithIcon = ({
     <ButtonBase disabled={disabled} onClick={onClick}>
         <div className="w-full flex justify-between">
             {children}
-            <span className="color-gradient tracking-wider text-xl">
+            <span className="color-gradient-light tracking-wider text-xl">
                 {text}
             </span>
         </div>
