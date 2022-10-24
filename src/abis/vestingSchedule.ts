@@ -49,5 +49,11 @@ export const vestingScheduleAbi = `[
       ],
       "stateMutability": "view",
       "type": "function"
+    }, {
+      "inputs": [],
+      "name": "claimAllTokens",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
     }
 ]`;
