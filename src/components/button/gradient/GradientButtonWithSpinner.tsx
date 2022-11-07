@@ -1,8 +1,7 @@
 import { ClipLoader } from 'react-spinners';
 import { GradientButtonBase } from './GradientButtonBase';
+import { Size } from '../Button';
 import { colors } from '../../../constants/colors';
-
-export type Size = 'small' | 'medium' | 'big';
 
 interface Props {
     size: Size;

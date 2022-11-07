@@ -1,8 +1,7 @@
-import styled from 'styled-components';
-
-import { ReactNode } from 'react';
-import { Navigation } from '../navigation/Navigation';
 import { Footer } from '../footer/Footer';
+import { Navigation } from '../navigation/Navigation';
+import { ReactNode } from 'react';
+import styled from 'styled-components';
 
 interface Props {
     children: ReactNode;

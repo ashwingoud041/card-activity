@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
-import styled from 'styled-components';
+import { Size } from '../Button';
 import { colors } from '../../../constants/colors';
-import { Size } from './GradientButton';
+import styled from 'styled-components';
 
 interface Props {
     size: Size;
@@ -23,7 +23,9 @@ export const GradientButtonBase = ({
                     ? 'w-[12rem] h-[3rem] px-2'
                     : size === 'medium'
                     ? 'w-[14rem] h-[3rem] px-4'
-                    : 'w-[17rem] h-[4rem] px-6'
+                    : size === 'big'
+                    ? 'w-[17rem] h-[4rem] px-6'
+                    : 'min-w-[18rem] h-[6rem] px-6 rounded-[44px]'
             } flex justify-center items-center rounded-[32px]`}
         >
             {children}

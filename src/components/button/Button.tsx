@@ -1,6 +1,6 @@
 import { ButtonBase } from './ButtonBase';
 
-export type Size = 'small' | 'medium' | 'big';
+export type Size = 'small' | 'medium' | 'big' | 'huge';
 interface Props {
     size: Size;
     disabled: boolean;
@@ -16,7 +16,9 @@ export const Button = ({ size, disabled, text, onClick }: Props) => (
                     ? 'text-xs'
                     : size === 'medium'
                     ? 'text-base'
-                    : 'text-xl'
+                    : size === 'big'
+                    ? 'text-xl'
+                    : 'text-2xl font-medium font-kanit-medium tracking-[.1em]'
             }`}
         >
             {text}

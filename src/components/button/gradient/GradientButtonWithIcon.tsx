@@ -1,6 +1,6 @@
-import { ReactNode } from 'react';
-import { Size } from './GradientButton';
 import { GradientButtonBase } from './GradientButtonBase';
+import { ReactNode } from 'react';
+import { Size } from '../Button';
 
 interface Props {
     size: Size;

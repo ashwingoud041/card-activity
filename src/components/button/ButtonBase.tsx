@@ -1,8 +1,6 @@
 import { GradientBorder } from '../GradientBorder';
 import { ReactNode } from 'react';
 import { Size } from './Button';
-import { colors } from '../../constants/colors';
-import styled from 'styled-components';
 
 interface Props {
     size: Size;
@@ -19,7 +17,9 @@ export const ButtonBase = ({ size, disabled, children, onClick }: Props) => (
                     ? 'min-w-[11rem] h-[3rem]'
                     : size === 'medium'
                     ? 'min-w-[13rem] h-[3rem]'
-                    : 'min-w-[16rem] h-[4rem]'
+                    : size === 'big'
+                    ? 'min-w-[16rem] h-[4rem]'
+                    : 'min-w-[18rem] h-[6rem] rounded-[44px]'
             } p-px flex justify-center items-center rounded-[32px]`}
         >
             <div
@@ -28,7 +28,9 @@ export const ButtonBase = ({ size, disabled, children, onClick }: Props) => (
                         ? 'px-2'
                         : size === 'medium'
                         ? 'px-4'
-                        : 'px-6'
+                        : size === 'big'
+                        ? 'px-6'
+                        : 'px-6 rounded-[44px]'
                 }`}
             >
                 {children}
