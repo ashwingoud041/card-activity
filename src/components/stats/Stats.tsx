@@ -16,24 +16,24 @@ import { useLakeStats } from '../../hooks/use-lake-stats';
 
 export interface LakeStats {
     marketCup: number;
-    prevMarketCup: number;
+    pastMarketCup: number;
     circulationSupply: number;
-    prevCirculationSupply: number;
+    pastCirculationSupply: number;
     lakePrice: number;
-    prevLakePrice: number;
+    pastLakePrice: number;
     consentsGathered: number;
-    prevConsentsGathered: number;
+    pastConsentsGathered: number;
 }
 
 const zeroStats = {
     marketCup: 0,
-    prevMarketCup: 0,
+    pastMarketCup: 0,
     circulationSupply: 0,
-    prevCirculationSupply: 0,
+    pastCirculationSupply: 0,
     lakePrice: 0,
-    prevLakePrice: 0,
+    pastLakePrice: 0,
     consentsGathered: 0,
-    prevConsentsGathered: 0,
+    pastConsentsGathered: 0,
 };
 
 export const Stats = () => {
@@ -43,19 +43,11 @@ export const Stats = () => {
 
     useEffect(() => {
         const fetchData = async (library: JsonRpcProvider) => {
-            const state = await useLakeStats(library);
-            setLakeStats((prevState) => ({
-                ...state,
-                prevCirculationSupply: prevState.circulationSupply,
-                prevLakePrice: prevState.lakePrice,
-                prevMarketCup: prevState.marketCup,
-                prevConsentsGathered: prevState.consentsGathered,
-            }));
+            setLakeStats(await useLakeStats(library));
         };
 
         if (library) {
             fetchData(library).catch(console.error);
-
             setInterval(() => {
                 fetchData(library).catch(console.error);
             }, REFRESH_STATS_INTERVAL);
@@ -90,25 +82,25 @@ export const Stats = () => {
                 <StatElement
                     title={'MARKET CAP'}
                     currentValue={lakeStats.marketCup}
-                    prevValue={lakeStats.prevMarketCup}
+                    pastValue={lakeStats.pastMarketCup}
                     formattedValue={formatValue(lakeStats.marketCup, '$')}
                 />
                 <StatElement
                     title={'CIRCULATION SUPPLY'}
                     currentValue={lakeStats.circulationSupply}
-                    prevValue={lakeStats.prevCirculationSupply}
+                    pastValue={lakeStats.pastCirculationSupply}
                     formattedValue={formatValue(lakeStats.circulationSupply)}
                 />
                 <StatElement
                     title={'$LAKE PRICE'}
                     currentValue={lakeStats.lakePrice}
-                    prevValue={lakeStats.prevLakePrice}
+                    pastValue={lakeStats.pastLakePrice}
                     formattedValue={formatValue(lakeStats.lakePrice, '$', 4)}
                 />
                 <StatElement
                     title={'CONSENTS GATHERED'}
                     currentValue={lakeStats.consentsGathered}
-                    prevValue={lakeStats.prevConsentsGathered}
+                    pastValue={lakeStats.pastConsentsGathered}
                     formattedValue={formatValue(
                         lakeStats.consentsGathered,
                         '',

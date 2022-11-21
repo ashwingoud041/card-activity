@@ -7,16 +7,23 @@ import { useConfig } from './use-config';
 
 export const useLakeCirculationSupply = async (
     provider: JsonRpcProvider,
+    blockTag?: number,
 ): Promise<number> => {
     const { lakeAddress, vestingScheduleAddress, usdtLakePoolAddress } =
         useConfig();
     const lakeTokenContract = new Contract(lakeAddress, ERC20Abi, provider);
     const totalSupply = await lakeTokenContract.callStatic.totalSupply();
     const vestingScheduleContractBalance =
-        await lakeTokenContract.callStatic.balanceOf(vestingScheduleAddress);
+        await lakeTokenContract.callStatic.balanceOf(vestingScheduleAddress, {
+            blockTag,
+        });
     const uniswapPoolBalance = await lakeTokenContract.callStatic.balanceOf(
         usdtLakePoolAddress,
+        {
+            blockTag,
+        },
     );
+
     return (
         parseBigNumber(totalSupply, ASSET_LAKE.decimals) -
         parseBigNumber(vestingScheduleContractBalance, ASSET_LAKE.decimals) -

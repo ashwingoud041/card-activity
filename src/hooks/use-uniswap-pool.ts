@@ -17,13 +17,16 @@ interface State {
     tick: number;
 }
 
-export const useUniswapPool = async (provider: JsonRpcProvider) => {
+export const useUniswapPool = async (
+    provider: JsonRpcProvider,
+    blockTag?: number,
+) => {
     const poolContract = usePoolContract(provider);
     const usdt = useUsdtToken();
     const lake = useLakeToken();
     const [immutables, state] = await Promise.all([
         getPoolImmutables(poolContract),
-        getPoolState(poolContract),
+        getPoolState(poolContract, blockTag),
     ]);
     return new Pool(
         usdt,
@@ -44,10 +47,13 @@ export const getPoolImmutables = async (
     };
 };
 
-export const getPoolState = async (poolContract: Contract): Promise<State> => {
+export const getPoolState = async (
+    poolContract: Contract,
+    blockTag?: number,
+): Promise<State> => {
     const [liquidity, slot] = await Promise.all([
-        poolContract.liquidity(),
-        poolContract.slot0(),
+        poolContract.liquidity({ blockTag }),
+        poolContract.slot0({ blockTag }),
     ]);
 
     return {

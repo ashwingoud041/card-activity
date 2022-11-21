@@ -1,26 +1,26 @@
-import styled from 'styled-components';
 import { colors } from '../../constants/colors';
 import downChart from './../../assets/icons/down-chart.svg';
+import styled from 'styled-components';
 import upChart from './../../assets/icons/up-chart.svg';
 
 interface Props {
     title: string;
     currentValue: number;
     formattedValue: string;
-    prevValue: number;
+    pastValue: number;
 }
 
 export const StatElement = ({
     title,
     currentValue,
     formattedValue,
-    prevValue,
+    pastValue,
 }: Props) => (
     <StatElementContainer className="flex justify-between px-8">
-        <div className="w-1/4 flex justify-center items-center mr-4">
+        <div className="min-w-[3rem] flex justify-center items-center mr-4">
             <img
-                className="w-full"
-                src={currentValue < prevValue ? downChart : upChart}
+                className="w-[3rem] h-[3rem]"
+                src={currentValue < pastValue ? downChart : upChart}
                 alt="chart"
             ></img>
         </div>
