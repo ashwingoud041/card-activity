@@ -49,7 +49,7 @@ export const TokenInput = ({
             <div className="w-full flex flex-col items-end">
                 <div className="flex items-center">
                     <button
-                        className="border border-gray-500 rounded-[32px] px-2 ml-2"
+                        className="border border-gray-500 rounded-[32px] px-2 ml-2 hover:scale-105 cursor-pointer transition-transform duration-300"
                         onClick={onMaxClick}
                         data-tip
                         data-for={tokenSymbol}

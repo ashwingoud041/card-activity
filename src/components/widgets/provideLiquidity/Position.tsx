@@ -16,7 +16,11 @@ type Props = {
 export const Position = ({ position, disabled, onClick }: Props) => {
     const { ethAddress } = useConfig();
     return (
-        <button disabled={disabled} onClick={onClick}>
+        <button
+            className="hover:scale-105 cursor-pointer transition-transform duration-300"
+            disabled={disabled}
+            onClick={onClick}
+        >
             <GradientBorder className="min-w-[18rem] h-[5.5rem] p-px flex justify-center items-center rounded-[32px]">
                 <div className="w-full h-full flex justify-center items-center rounded-[32px] bg-black-500 px-4">
                     <div className="w-full flex justify-between items-center">

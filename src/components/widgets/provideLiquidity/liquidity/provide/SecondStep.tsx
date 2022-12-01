@@ -254,7 +254,7 @@ export const SecondStep = ({
                     PROVIDE LIQUIDITY
                 </div>
                 <img
-                    className="w-[1.5rem] h-[1.5rem] cursor-pointer"
+                    className="w-[1.5rem] h-[1.5rem] hover:scale-105 cursor-pointer transition-transform duration-300"
                     src={settingsIcon}
                     alt="settings"
                     onClick={() => {
