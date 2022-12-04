@@ -1,6 +1,7 @@
 import { Redirect, Route, Switch } from 'react-router-dom';
 
 import { Main } from './pages/Main';
+import { PrivacyPolicy } from './pages/PrivacyPolicy';
 import { Providers } from './Providers';
 import { TermsAndConditions } from './pages/TermAndConditions';
 
@@ -13,6 +14,7 @@ export const App = () => (
                 path="/terms-and-conditions"
                 component={TermsAndConditions}
             />
+            <Route exact path="/privacy-policy" component={PrivacyPolicy} />
             <Redirect exact from="*" to="/" />
         </Switch>
     </Providers>

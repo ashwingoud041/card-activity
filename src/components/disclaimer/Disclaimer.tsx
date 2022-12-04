@@ -19,8 +19,8 @@ export const Disclaimer = ({ onAcceptClick }: Props) => {
     return (
         <div className="w-full h-[100vh]">
             <div className="w-full h-full z-40 fixed flex items-center justify-center">
-                <div className="w-[30rem] h-[30rem] flex justify-between p-8 bg-black-800 rounded-[20px] inset-shadow overflow-auto">
-                    <div className="w-full flex flex-col items-center">
+                <div className="w-[30rem] h-[25rem] flex justify-between p-8 bg-black-800 rounded-[20px] inset-shadow overflow-auto">
+                    <div className="w-full flex flex-col items-center justify-between">
                         <div className="w-full flex relative items-center justify-center">
                             <span className="text-3xl color-gray-gradient text-center mt-2 mb-4 tracking-[.1em] font-medium font-kanit-medium cursor-default">
                                 DISCLAIMER
@@ -45,84 +45,62 @@ export const Disclaimer = ({ onAcceptClick }: Props) => {
                             </button>
                         </div>
                         <div className="flex flex-col overflow-auto">
-                            <span className="text-xl tracking-[.05em] font-medium font-kanit-medium text-start">
-                                Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla
-                                Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla
-                                Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla
-                                Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla
-                                Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla
-                                Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla
-                                Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla
-                                Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla
-                                Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla
-                                Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla
-                                Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla
-                                Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla
-                                Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla
-                                Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla
-                                Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla
-                                Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla
-                                Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla
-                                Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla
-                            </span>
-                            <div className="flex flex-col mt-4">
-                                <label>
-                                    <input
-                                        className="mr-3"
-                                        type="checkbox"
-                                        checked={firstCheckbox}
-                                        onChange={() =>
-                                            setFirstCheckbox(!firstCheckbox)
-                                        }
-                                    />
-                                    I accept the{' '}
-                                    <Link
-                                        className="font-medium font-kanit-medium"
-                                        to="/terms-and-conditions"
-                                    >
-                                        Terms & Conditions
-                                    </Link>{' '}
-                                    and{' '}
-                                    <Link
-                                        className="font-medium font-kanit-medium"
-                                        to="/privacy-policy"
-                                    >
-                                        Privacy Policy
-                                    </Link>
-                                    .
-                                </label>
-                                <label>
-                                    <input
-                                        className="mr-3"
-                                        type="checkbox"
-                                        checked={secondCheckbox}
-                                        onChange={() =>
-                                            setSecondCheckbox(!secondCheckbox)
-                                        }
-                                    />
-                                    I have familiarised myself with{' '}
-                                    <Link
-                                        className="font-medium font-kanit-medium"
-                                        to="/terms-and-conditions"
-                                    >
-                                        INFORMATION ABOUT THE RISKS ASSOCIATED
-                                        WITH THE PROVISION OF SERVICES
-                                    </Link>{' '}
-                                    and I accept the risks indicated therein.
-                                </label>
-                                <label>
-                                    <input
-                                        className="mr-3"
-                                        type="checkbox"
-                                        checked={thirdCheckbox}
-                                        onChange={() =>
-                                            setThirdCheckbox(!thirdCheckbox)
-                                        }
-                                    />
-                                    I consent to the commencement of services
-                                    before the end of the withdrawal period.
-                                </label>
-                            </div>
+                            <label>
+                                <input
+                                    className="mr-3"
+                                    type="checkbox"
+                                    checked={firstCheckbox}
+                                    onChange={() =>
+                                        setFirstCheckbox(!firstCheckbox)
+                                    }
+                                />
+                                I accept the{' '}
+                                <Link
+                                    className="font-medium font-kanit-medium"
+                                    to="/terms-and-conditions"
+                                >
+                                    Terms & Conditions
+                                </Link>{' '}
+                                and{' '}
+                                <Link
+                                    className="font-medium font-kanit-medium"
+                                    to="/privacy-policy"
+                                >
+                                    Privacy Policy
+                                </Link>
+                                .
+                            </label>
+                            <label>
+                                <input
+                                    className="mr-3"
+                                    type="checkbox"
+                                    checked={secondCheckbox}
+                                    onChange={() =>
+                                        setSecondCheckbox(!secondCheckbox)
+                                    }
+                                />
+                                I have familiarised myself with{' '}
+                                <Link
+                                    className="font-medium font-kanit-medium"
+                                    to="/terms-and-conditions"
+                                >
+                                    INFORMATION ABOUT THE RISKS ASSOCIATED WITH
+                                    THE PROVISION OF SERVICES
+                                </Link>{' '}
+                                and I accept the risks indicated therein.
+                            </label>
+                            <label>
+                                <input
+                                    className="mr-3"
+                                    type="checkbox"
+                                    checked={thirdCheckbox}
+                                    onChange={() =>
+                                        setThirdCheckbox(!thirdCheckbox)
+                                    }
+                                />
+                                I consent to the commencement of services before
+                                the end of the withdrawal period.
+                            </label>
                         </div>
                         <div className="pt-6">
                             {firstCheckbox &&
