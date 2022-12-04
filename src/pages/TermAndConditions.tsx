@@ -2,7 +2,7 @@ import { Document, Page } from 'react-pdf/dist/esm/entry.webpack';
 
 import { Loading } from '../components/loading/Loading';
 import { PDF_LOADING_DELAY } from '../constants/commons';
-import terms from './../assets/documents/Data_Lake_Regulamin.pdf';
+import terms from './../assets/documents/DATA_RIVER_TERMS_AND_CONDITIONS.pdf';
 import { useState } from 'react';
 
 export const TermsAndConditions = () => {

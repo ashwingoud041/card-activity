@@ -2,7 +2,7 @@ import { Document, Page } from 'react-pdf/dist/esm/entry.webpack';
 
 import { Loading } from '../components/loading/Loading';
 import { PDF_LOADING_DELAY } from '../constants/commons';
-import privacyPolicy from './../assets/documents/PrivacyPolicy.pdf';
+import privacyPolicy from './../assets/documents/DATA_RIVER_PRIVACY_POLICY.pdf';
 import { useState } from 'react';
 
 export const PrivacyPolicy = () => {
