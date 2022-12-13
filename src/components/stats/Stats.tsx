@@ -21,7 +21,7 @@ const zeroStats = {
     pastCirculationSupply: 0,
     lakePrice: 0,
     pastLakePrice: 0,
-    consentsGathered: 0,
+    consentsGathered: 409,
     pastConsentsGathered: 0,
 };
 
@@ -99,7 +99,7 @@ export const Stats = () => {
                     formattedValue={formatValue(
                         lakeStats.consentsGathered,
                         '',
-                        409,
+                        0,
                     )}
                 />
             </div>
