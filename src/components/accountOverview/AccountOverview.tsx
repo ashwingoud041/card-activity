@@ -103,21 +103,21 @@ export const AccountOverview = () => {
     return (
         <div className="w-full h-full bg-black-800 rounded-[42px] inset-shadow relative">
             <div
-                className={`w-full h-full flex flex-col items-center px-16 py-10 ${
+                className={`w-full h-full flex flex-col items-center px-4 sm:px-16 py-6 sm:py-10 ${
                     account ? '' : 'blur-sm pointer-events-none'
                 }`}
             >
-                <div className="w-full font-kanit-medium color-gray-gradient text-shadow text-3xl tracking-[.12em] mb-7">
+                <div className="w-full font-kanit-medium color-gray-gradient text-shadow text-3xl tracking-[.12em] mb-4 sm:mb-7 text-center sm:text-left">
                     YOUR ACCOUNT
                 </div>
-                <div className="w-full h-full flex items-center justify-center bg-black-600 rounded-[28px] box-shadow mb-5">
-                    <div className="w-1/2 h-full mx-4 flex justify-center pl-2 pt-10">
+                <div className="w-full h-full flex flex-col sm:flex-row items-center justify-center bg-black-600 rounded-[28px] box-shadow sm:mb-5">
+                    <div className="w-4/5 sm:w-1/2 h-full mx-4 flex justify-center sm:pl-2 pt-4 sm:pt-10">
                         <ProgressChart
                             unlocked={(totalUnlocked * 100) / totalAllocated}
                             locked={(totalLocked * 100) / totalAllocated}
                         />
                     </div>
-                    <div className="w-1/2 h-full flex flex-col ml-3 mr-5 py-4 justify-between">
+                    <div className="w-full sm:w-1/2 h-full flex flex-col sm:ml-3 sm:mr-5 sm:py-4 pb-4 sm:pb-0 px-4 sm:px-0 justify-between">
                         <AccountMetric
                             title={'LOCKED $LAKE'}
                             iconSrc={lockClosedIcon}

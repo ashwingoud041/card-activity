@@ -14,7 +14,7 @@ export const StatElement = ({
     formattedValue,
     pastValue,
 }: Props) => (
-    <div className="w-full h-[4.75rem] flex justify-between px-6 box-shadow rounded-[18px] bg-black-600 overflow-auto">
+    <div className="w-full h-[4.75rem] mt-4 sm:mt-0 flex justify-between px-6 box-shadow rounded-[18px] bg-black-600 overflow-auto">
         <div className="min-w-[4rem] flex justify-center items-center mr-4">
             <img
                 className="w-[4rem] h-[3rem]"

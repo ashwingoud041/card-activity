@@ -19,7 +19,7 @@ export const AccountMetric = ({
     showDecimals,
 }: Props) => {
     return (
-        <div className="w-full h-[5.75rem] flex justify-between pr-8 bg-black-700 rounded-[20px] inset-shadow overflow-auto">
+        <div className="w-full h-[5.75rem] mt-4 sm:mt-0 flex justify-between sm:pr-8 bg-black-700 rounded-[20px] inset-shadow overflow-auto">
             <div className="min-w-[3rem] flex items-center justify-center mx-3">
                 <img
                     className="w-[3rem] h-[3rem]"
@@ -27,7 +27,7 @@ export const AccountMetric = ({
                     alt="icon"
                 ></img>
             </div>
-            <div className="w-full flex items-center justify-between">
+            <div className="w-full flex items-center justify-between mr-3 sm:mr-0">
                 <span
                     className={`w-[4rem] whitespace-wrap text-sm leading-5 text-center ${fontColor} mr-2`}
                 >

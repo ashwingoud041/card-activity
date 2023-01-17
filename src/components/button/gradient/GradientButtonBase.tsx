@@ -28,7 +28,7 @@ export const GradientButtonBase = ({
                 size === 'small'
                     ? 'min-w-[12rem] h-[2.5rem] px-2'
                     : size === 'medium'
-                    ? 'min-w-[10rem] sm:min-w-[14rem] h-[2rem] sm:h-[3rem] p-2 sm:px-6'
+                    ? 'min-w-[14rem] h-[2.5rem] sm:h-[3rem] p-2 sm:px-6'
                     : 'min-w-[18rem] h-[5.5rem] px-6 !rounded-[80px]'
             } flex justify-center items-center rounded-[32px]`}
         >

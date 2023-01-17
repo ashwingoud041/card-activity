@@ -69,8 +69,8 @@ export const Stats = () => {
         }
     };
     return (
-        <div className="w-full h-full flex flex-col items-center justify-between bg-black-800 rounded-[42px] inset-shadow px-8 py-6">
-            <div className="font-kanit-medium color-gray-gradient text-shadow text-xl tracking-[.12em] pt-2 pb-4">
+        <div className="w-full h-full flex flex-col items-center justify-between bg-black-800 rounded-[42px] inset-shadow px-4 sm:px-8 py-6">
+            <div className="font-kanit-medium color-gray-gradient text-shadow text-xl tracking-[.12em] sm:pt-2 sm:pb-4">
                 $LAKE STATS
             </div>
             <div className="w-full h-full flex flex-col items-center justify-between">

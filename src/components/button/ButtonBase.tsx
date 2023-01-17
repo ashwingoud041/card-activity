@@ -22,7 +22,7 @@ export const ButtonBase = ({ size, disabled, children, onClick }: Props) => (
                 size === 'small'
                     ? 'min-w-[11rem] h-[2.5rem]'
                     : size === 'medium'
-                    ? 'min-w-[10rem] sm:min-w-[13rem] h-[2rem] sm:h-[3rem]'
+                    ? 'min-w-[10rem] sm:min-w-[13rem] h-[2.5rem] sm:h-[3rem]'
                     : 'min-w-[18rem] h-[5.5rem] !rounded-[80px]'
             } p-px flex justify-center items-center rounded-[32px]`}
         >

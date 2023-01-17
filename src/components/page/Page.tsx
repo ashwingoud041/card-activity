@@ -6,7 +6,7 @@ interface Props {
 }
 
 export const Page = ({ children }: Props) => (
-    <div className="w-full max-w-[1536px] h-full min-h-screen overflow-y-scroll overflow-x-hidden m-auto relative px-6 xl:px-28">
+    <div className="w-full max-w-[1536px] h-full min-h-screen overflow-y-scroll overflow-x-hidden m-auto relative px-4 sm:px-6 xl:px-28">
         <Navigation />
         {children}
     </div>
