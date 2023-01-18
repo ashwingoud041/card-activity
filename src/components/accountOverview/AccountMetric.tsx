@@ -1,4 +1,3 @@
-import { ReactNode } from 'react';
 import { formatValue } from '../../utils/formatValue';
 
 interface Props {
