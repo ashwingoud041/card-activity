@@ -43,9 +43,7 @@ export const TransactionStatus = ({ status, transactionHash }: Props) => {
             <button
                 onClick={() =>
                     window.open(
-                        `https://${
-                            chainId === networks.goerli.chainId ? 'goerli.' : ''
-                        }etherscan.io/tx/${transactionHash}`,
+                        `https://protect.flashbots.net/tx/${transactionHash}`,
                         '_blank',
                     )
                 }
